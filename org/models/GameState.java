@@ -1,8 +1,7 @@
-package Models;
+package org.example.models;
 
 public enum GameState {
-    ONGOING,
+    IN_PROGRESS,
     ENDED,
     DRAW
-
 }
