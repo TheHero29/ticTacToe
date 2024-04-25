@@ -5,7 +5,9 @@ import org.example.exceptions.InvalidMoveException;
 import org.example.models.Game;
 import org.example.models.GameState;
 import org.example.models.Player;
+import org.example.models.Symbol;
 
+import java.util.HashSet;
 import java.util.List;
 
 public class GameController {
@@ -15,7 +17,7 @@ public class GameController {
             set.add(players.get(i).getSymbol());
         }
         if(set.size()!=players.size())
-            throw SameSymbolException("Some players have taken the same symbol, please take unique symbols!");
+            throw new SameSymbolException("Some players have taken the same symbol, please take unique symbols!");
         return new Game(dimension, players);
     }
 
